@@ -1,5 +1,19 @@
 #include <stdio.h>
 
+
+//function pointer prototype 
+void callback(char *result); 
+
+//create a pointer to function so it can be passed as parameter.
+void callback(char *result){
+	printf("Result is %s\n", result);
+}
+
+
+void doSth(void (*callback)(char*), char *name){
+	(*callback)(name);
+}
+
 int main(int argc, char const *argv[])
 {
 	//string array
@@ -34,6 +48,8 @@ int main(int argc, char const *argv[])
 	//int pointer increase 4.
 	intp++;
 	printf("%d\n", intp);
+
+	doSth(callback, "hello ann");
 
 	return 0;
 }

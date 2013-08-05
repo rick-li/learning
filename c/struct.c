@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
+
 struct Person
 {
 	char *name; //size 4
@@ -62,5 +63,12 @@ int main(int argc, char const *argv[])
 
 	Person_destroy(joe);
 	Person_destroy(frank);
+
+	//compound initializer
+	struct Person ann = {"Ann", 32, 64, 160};
+	
+	printf("Anns name is %s\n", ann.name);
+	printf("Anns name is %s\n", ann.name);
+
 	return 0;
 }

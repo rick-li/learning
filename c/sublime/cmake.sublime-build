@@ -1,0 +1,8 @@
+{
+   "cmd": ["make $file_base_name && ${file_path}/${file_base_name}"],
+   // "cmd": ["echo $file_base_name "],
+   "shell": "false",
+   "selector": "source.makefile"
+
+
+}
